@@ -1,0 +1,14 @@
+syntax = "proto3";
+import "google/protobuf/empty.proto";
+
+service MoodService {
+  rpc checkMood(google.protobuf.Empty) returns (stream MoodResp);
+}
+
+message MoodResp {
+  enum Mood {
+    HAPPY = 0;
+    SAD = 1;
+  }
+  Mood mood = 1;
+}
