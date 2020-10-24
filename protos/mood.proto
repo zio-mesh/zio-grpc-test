@@ -11,4 +11,5 @@ message MoodResp {
     SAD = 1;
   }
   Mood mood = 1;
+  string desc = 2;
 }

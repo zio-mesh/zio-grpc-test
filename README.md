@@ -10,6 +10,7 @@ Ubuntu 18.04.5 <br>
 OpenJDK Runtime Environment (build 11.0.10-testing+0-builds.shipilev.net-openjdk-jdk11-dev-b350-20201014) <br>
 Scala 2.13.3 <br>
 Protoc 3.13.0 <br>
+grpcurl v1.7.0 <br>
 
 ### Reproduce
 
@@ -22,10 +23,14 @@ Protoc 3.13.0 <br>
 
 ```shell
 bku@lap:~/work/ana/icare-back/it$ grpcurl -plaintext localhost:9090 MoodService/checkMood
+bku@lap:~$ grpcurl -plaintext localhost:9090 MoodService/checkMood
 {
-
+  "desc": "good"
 }
 {
-  "mood": "SAD"
+  "mood": "SAD",
+  "desc": "bad"
 }
 ```
+
+In this test, I see some output, but for my prod env, I see zero output for `enum` fields
