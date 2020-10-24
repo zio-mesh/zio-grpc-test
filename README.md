@@ -12,6 +12,23 @@ Scala 2.13.3 <br>
 Protoc 3.13.0 <br>
 grpcurl v1.7.0 <br>
 
+### Service description
+
+```scala
+service MoodService {
+  rpc checkMood(google.protobuf.Empty) returns (stream MoodResp);
+}
+
+message MoodResp {
+  enum Mood {
+    HAPPY = 0;
+    SAD = 1;
+  }
+  Mood mood = 1;
+  string desc = 2;
+}
+```
+
 ### Reproduce
 
 ```bash
