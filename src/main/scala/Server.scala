@@ -12,7 +12,7 @@ import mood.MoodResp.Mood._
 class MoodServiceImpl() extends RMoodService[ZEnv] {
 
   override def checkMood(request: Empty): ZStream[zio.ZEnv with Any, Status, MoodResp] =
-    ZStream(MoodResp(HAPPY, "good"), MoodResp(SAD, "bad"))
+    ZStream(MoodResp(HAPPY, "good"), MoodResp(SAD, "bad"), MoodResp(HAPPY, "happy again :)"))
 
 }
 
