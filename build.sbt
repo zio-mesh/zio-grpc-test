@@ -6,7 +6,7 @@ inThisBuild(
       Resolver.sonatypeRepo("snapshots")
     ),
     // semanticdbEnabled := true,
-    scalaVersion := "2.13.3",
+    scalaVersion := "2.13.8",
     maxErrors := 3,
     organization := "org.icare",
     startYear := Some(2020),
